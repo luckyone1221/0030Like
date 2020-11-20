@@ -1,0 +1,28 @@
+mixin sCharts(data)
+	// start sCharts
+	+b.sCharts.section#sCharts&attributes(attributes)
+		.container
+			+e.row.row
+				+chartItem('Лайков поставлено на ваши публикации', 'Сколько лайков в день Вам ставям люди в нашем сервисе.')
+					#likeUser
+				+chartItem('Лайки на последних публикациях', 'Среднее количество лайков на ваших последних публикациях.', true)
+					#likeLast
+	// end sCharts
+
+mixin chartItem(titleTxt, tooltipTxt, refreshBtn)
+	+e.col.col-lg-6
+		+e.item
+			+e.title
+				+e.H2.txt=titleTxt
+				+tooltip(tooltipTxt)
+				if refreshBtn
+					+e.refresh-btn(href="#")
+						+icon('refresh')
+			+e.chart-cont
+				block
+
+mixin tooltip(tooltipTxt)
+	+b.tooltip
+		+e.tt-img
+			+icon('question-sign')
+		+e.tt-txt=tooltipTxt

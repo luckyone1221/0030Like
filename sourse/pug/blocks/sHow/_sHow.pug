@@ -1,0 +1,32 @@
+mixin sHow(data)
+	// start sHow
+	+b.SECTION.sHow.section#sHow&attributes(attributes)
+		.container
+			+e.inner
+				+b.section-title.text-center
+					h2 Как получить лайки и просмотры?
+				+e.row.row
+					+sHowItem(1)
+						| Заходите в
+						br.d-none.d-md-block
+						| раздел
+						|
+						a(href="#") самопиар
+					+sHowItem(2)
+						| Выбирайте публикацию и
+						br.d-none.d-lg-block
+						| количество лайков и просмотров
+					+sHowItem(3)
+						| Она попадет на биржу,
+						br.d-none.d-lg-block
+						| люди ставят лайки и просмотры
+	// end sHow
+
+mixin sHowItem(imgName)
+	+e.col.col-6.col-sm-4
+		+e.item
+			+e.img-cont
+				+e.img
+					img(loading="lazy" src=`img/svg/sHow-${imgName}.svg` alt="")
+			+e.txt
+				block

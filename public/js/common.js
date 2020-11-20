@@ -70,16 +70,18 @@ var JSCCommon = {
 	},
 	// /modalCall
 	toggleMenu: function toggleMenu() {
-		var _this = this;
+		var _this2 = this;
+
+		console.log(this.btnToggleMenuMobile);
 
 		if (this.btnToggleMenuMobile) {
 			this.btnToggleMenuMobile.forEach(function (element) {
 				element.addEventListener('click', function () {
-					_this.btnToggleMenuMobile.forEach(function (element) {
+					_this2.btnToggleMenuMobile.forEach(function (element) {
 						return element.classList.toggle("on");
 					});
 
-					_this.menuMobile.classList.toggle("active");
+					_this2.menuMobile.classList.toggle("active");
 
 					document.body.classList.toggle("fixed");
 					document.querySelector('html').classList.toggle("fixed");
@@ -99,21 +101,17 @@ var JSCCommon = {
 		}
 	},
 	mobileMenu: function mobileMenu() {
-		var _this2 = this;
-
 		if (this.menuMobileLink) {
-			this.toggleMenu();
-			document.addEventListener('mouseup', function (event) {
-				var container = event.target.closest(".menu-mobile--js.active"); // (1)
+			this.toggleMenu(); //omg...
+			// document.addEventListener('mouseup', (event) => {
+			// 	let container = event.target.closest(".menu-mobile--js.active"); // (1)
+			// 	if (!container) {
+			// 		this.closeMenu();
+			// 	}
+			// }, { passive: true });
 
-				if (!container) {
-					_this2.closeMenu();
-				}
-			}, {
-				passive: true
-			});
 			window.addEventListener('resize', function () {
-				if (window.matchMedia("(min-width: 992px)").matches) {
+				if (window.matchMedia("(min-width: 768px)").matches) {
 					JSCCommon.closeMenu();
 				}
 			}, {
@@ -304,6 +302,176 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+
+	window.onload = function () {
+		document.body.classList.add('loaded_hiding');
+		window.setTimeout(function () {
+			document.body.classList.add('loaded');
+			document.body.classList.remove('loaded_hiding');
+		}, 500);
+	}; //luckyone js
+	//amcharts
+
+
+	var dataArrExample = [{
+		"country": "10.11.2020",
+		"visits": 11
+	}, {
+		"country": "11.11.2020",
+		"visits": 22
+	}, {
+		"country": "12.11.2020",
+		"visits": 1
+	}, {
+		"country": "13.11.2020",
+		"visits": 5
+	}, {
+		"country": "14.11.2020",
+		"visits": 50
+	}, {
+		"country": "15.11.2020",
+		"visits": 44
+	}, {
+		"country": "16.11.2020",
+		"visits": 78
+	}, {
+		"country": "17.11.2020",
+		"visits": 22
+	}, {
+		"country": "18.11.2020",
+		"visits": 11
+	}, {
+		"country": "18.11.2020",
+		"visits": 1
+	}];
+
+	function createCommonChart2(elId, dataArr, paintColor) {
+		am4core.ready(function () {
+			//??
+			// Themes begin
+			am4core.useTheme(am4themes_animated); // Themes end
+			// Create chart instance
+
+			var chart = am4core.create(elId, am4charts.XYChart); //chart.scrollbarX = new am4core.Scrollbar();
+			// Add data
+
+			chart.data = dataArr; // Create axes
+
+			var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+			categoryAxis.dataFields.category = "country";
+			categoryAxis.renderer.grid.template.location = 0; //change to avoid mob problems
+
+			categoryAxis.renderer.minGridDistance = 20;
+			categoryAxis.renderer.labels.template.horizontalCenter = "right";
+			categoryAxis.renderer.labels.template.verticalCenter = "middle"; //rotation of labels
+
+			categoryAxis.renderer.labels.template.rotation = 300;
+			categoryAxis.tooltip.disabled = true;
+			categoryAxis.renderer.minHeight = 110;
+			var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			valueAxis.renderer.minWidth = 50; // Create series
+
+			var series = chart.series.push(new am4charts.ColumnSeries());
+			series.sequencedInterpolation = true;
+			series.dataFields.valueY = "visits";
+			series.dataFields.categoryX = "country";
+			series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
+			series.columns.template.strokeWidth = 0; //?
+
+			series.columns.rotation = 45;
+			series.tooltip.pointerOrientation = "vertical"; //series.columns.template.column.cornerRadiusTopLeft = 10;
+			//series.columns.template.column.cornerRadiusTopRight = 10;
+
+			series.columns.template.column.fillOpacity = 0.8; // on hover, make corner radiuses bigger
+
+			var hoverState = series.columns.template.column.states.create("hover");
+			hoverState.properties.cornerRadiusTopLeft = 0;
+			hoverState.properties.cornerRadiusTopRight = 0;
+			hoverState.properties.fillOpacity = 1;
+			series.columns.template.adapter.add("fill", function (fill, target) {
+				//can change color here
+				if (paintColor) {
+					return paintColor;
+				}
+
+				return chart.colors.getIndex(target.dataItem.index);
+			}); // Cursor
+
+			chart.cursor = new am4charts.XYCursor();
+		}); // end am4core.ready()
+	}
+
+	createCommonChart2("likeUser", dataArrExample, '#20c997');
+	createCommonChart2("likeLast", dataArrExample, '#d65988'); //range slider
+
+	function currencyFormat(num) {
+		return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+	}
+
+	$(".range-wrap").each(function () {
+		var _this = $(this);
+
+		var $range = _this.find(".slider-js");
+
+		var $inputFrom = _this.find(".input_from");
+
+		var $inputTo = _this.find(".input_to");
+
+		var instance,
+				from,
+				to,
+				min = $range.data('min'),
+				max = $range.data('max');
+		$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			grid: false,
+			grid_snap: false,
+			hide_min_max: true,
+			hide_from_to: true,
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
+		});
+		instance = $range.data("ionRangeSlider");
+
+		function updateInputs(data) {
+			from = data.from;
+			to = data.to;
+			$inputFrom.prop("value", currencyFormat(from));
+			$inputTo.prop("value", currencyFormat(to)); // InputFormat();
+		}
+
+		$inputFrom.on("change input ", function () {
+			var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+
+			instance.update({
+				from: val
+			});
+			$(this).prop("value", currencyFormat(val));
+			console.log(val);
+		});
+		$inputTo.on("change input ", function () {
+			var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+			if (val < from) {
+				val = from;
+			} else if (val > max) {
+				val = max;
+			}
+
+			instance.update({
+				to: val
+			});
+			$(this).prop("value", currencyFormat(val));
+		});
+	}); //end am
 }
 
 ;

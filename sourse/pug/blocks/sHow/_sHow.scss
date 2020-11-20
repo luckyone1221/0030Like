@@ -1,0 +1,95 @@
+// start .sHow
+.sHow {
+	--sPT: #{0};
+	--sPB: #{rem(20)};
+	@include media-breakpoint-up(md){
+		--sPB: #{rem(30)};
+	}
+	--sTPB: #{rem(30)};
+
+	&__inner{
+		padding: rem(15) rem(20) rem(40) rem(20);
+		border-radius: rem(4);
+
+		background-color: $white;
+		position: relative;
+		z-index: 1;
+		&:before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: rem(4);
+			opacity: .1;
+
+			background: $white url(../img/svg/diamond-bg2.svg) repeat center / 150px;
+		}
+	}
+	.section-title{
+		h2{
+
+		}
+	}
+	&__row{
+		@include roww(20px);
+
+		@include media-breakpoint-down(sm){
+			justify-content: center;
+			@include roww(10px);
+		}
+	}
+	&__col{
+		margin-bottom: rem(20px);
+		@include media-breakpoint-up(sm){
+			margin-bottom: 0;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+
+		flex-direction: column;
+		@include media-breakpoint-up(sm){
+			flex-direction: column;
+		}
+	}
+	&__img-cont{
+		width: rem(82px);
+
+		margin-bottom: rem(5);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(5);
+		}
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: (150/82) * 100%;
+	}
+	&__txt{
+		text-align: center;
+		font-weight: 300;
+
+		font-size: rem(14.2);
+		@include media-breakpoint-up(sm){
+			font-size: rem(15);
+		}
+		@include media-breakpoint-up(md){
+			font-size: rem(16);
+		}
+		a{
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	//
+	&__{}
+	&__{}
+	&__{}
+} // end.sHow

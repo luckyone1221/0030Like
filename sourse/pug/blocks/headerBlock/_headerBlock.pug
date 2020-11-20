@@ -2,9 +2,70 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+			+e.row.row
+				+headSmallItem('Сменить аккаунт')
+					+e.user
+						+e.user-img
+							img(loading="lazy" src="img/@2x/profile-img.jpg" alt="")
+						+e.user-name mr.krutmen
+				+headSmallItem('Биржа')
+					+e.item-img
+						img(loading="lazy" src="img/svg/heart_bag.svg" alt="")
+				+headSmallItem('Самопиар')
+					+e.item-img
+						img(loading="lazy" src="img/svg/heart.svg" alt="")
+				+e.col.col-6.col-md-3
+					+e.vip-item.link-modal(href="#vip-modal")
+						+e.vip-bg
+							img(loading="lazy" src="img/svg/diamond-bg.svg" alt="")
+						+e.vip-content
+							+e.vip-title Внимание!
+							+e.vip-txt
+								| Мы можем следить за вашим
+								| instagram и автоматически
+								| ставить
+								|
+								+icon('heart')
+								|
+								| и
+								|
+								+icon('eye')
+								|
+								| на новые публикации
+				+headBanerItem()
+					+e.txt-bl
+						+e.title Проверьте работу биржи!
+						+e.txt
+							|Закажите 50
+							|
+							+icon('heart')
+							|
+							| на последние 27 публикаций
+					+e.btn.link-modal(href='#modal-check')
+						span Всего за 99
+						span.rub-mark ₽
+				+headBanerItem()
+					+e.txt-bl
+						+e.H2.title Бонус за каждый аккаунт.
+						+e.txt
+							| Получите 100
+							|
+							+icon('heart')
+							|
+							| на баланс прямо сейчас!
+					+e.btn.link-modal(href="#add-insta") Получить
 	// end headerBlock
+
+mixin headSmallItem(footTxt)
+	+e.col.col-6.col-md-3
+		+e.item(href="#")
+			+e.i-content
+				block
+			+e.i-foot=footTxt
+
+mixin headBanerItem()
+	+e.col.col-12.col-lg-6
+		+b.headBaner
+			+e.bg
+				img(loading="lazy" src="img/svg/bg-action.svg" alt="")
+			block

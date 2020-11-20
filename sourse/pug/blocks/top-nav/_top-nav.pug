@@ -1,27 +1,24 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
+	+b.menu-mobile--js.d-md-none
+		//+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
-			+mnu()
+			+mnu2()
 			.text-right
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			+mnu()
-					
+		+e.container.container
+			+e.user-img(href="#")
+				img(loading="lazy" src="img/@2x/profile-img.jpg" alt="")
+			+b.toggle-menu-mobile--js.d-md-none
+				span
+			+mnu()(class="d-none d-md-flex")
+			+e.complain-btn.link-modal(href='#manager-complain')
+				span Пожаловаться на менеджера
+				+icon('ambulance')
+			+e.log-out(href="#")
+				+icon('sign-out')
 	// end top-nav

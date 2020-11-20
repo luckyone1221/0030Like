@@ -20,146 +20,629 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
-		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
-		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body> 
-		<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-		</div>
-		<div class="menu-mobile menu-mobile--js d-lg-none">
-			<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-			</div>
-			<div class="menu-mobile__inner">
-				<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-					</li>
-				</ul>
-				<div class="text-right"></div>
-			</div>
-		</div>
-		<!--  мобильное меню-->
-		<!-- start header-->
-		<header class="header" id="header">
-		</header>
-		<!-- end header-->
-		<!-- start top-nav-->
-		<div class="top-nav block-with-lazy">
-			<div class="container">
-				<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- end top-nav-->
-		<!-- start topLine-->
-		<section class="topLine section" id="topLine">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>topLine</h2>
+	<body>
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-md-none">
+				<!--+b.toggle-menu-mobile--jsspan
+				-->
+				<div class="menu-mobile__inner">
+					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link navMenu__link--bag" href="#" itemprop="url">
+							<div class="icon-cont">
+								<svg class="icon icon-bag ">
+									<use xlink:href="img/svg/sprite.svg#bag"></use>
+								</svg>
+							</div><span>Биржа</span></a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link navMenu__link--heart" href="#" itemprop="url">
+							<div class="icon-cont">
+								<svg class="icon icon-heart ">
+									<use xlink:href="img/svg/sprite.svg#heart"></use>
+								</svg>
+							</div><span>Самопиар</span></a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link navMenu__link--vip link-modal" href="#vip-modal" itemprop="url">
+							<div class="icon-cont">
+								<svg class="icon icon-crown ">
+									<use xlink:href="img/svg/sprite.svg#crown"></use>
+								</svg>
+							</div><span>Активировать VIP</span></a>
+						</li>
+					</ul>
+					<div class="text-right"></div>
 				</div>
-				<div class="row"></div>
 			</div>
-		</section>
-		<!-- end topLine-->
-		<!-- start headerBlock-->
-		<div class="headerBlock section" id="headerBlock">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>headerBlock ds dfsdfdsfsd</h2>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="top-nav__container container"><a class="top-nav__user-img" href="#"><img loading="lazy" src="img/@2x/profile-img.jpg" alt=""/></a>
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-md-none"><span></span>
+						</div>
+						<ul class="navMenu d-none d-md-flex" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Биржа</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Самопиар</a>
+							</li>
+							<li class="navMenu__item" itemprop="item"><a class="navMenu__link navMenu__link--vip link-modal" href="#vip-modal" itemprop="url">Активировать VIP</a>
+							</li>
+						</ul><a class="top-nav__complain-btn link-modal" href="#manager-complain"><span>Пожаловаться на менеджера</span>
+						<svg class="icon icon-ambulance ">
+							<use xlink:href="img/svg/sprite.svg#ambulance"></use>
+						</svg></a><a class="top-nav__log-out" href="#">
+						<svg class="icon icon-sign-out ">
+							<use xlink:href="img/svg/sprite.svg#sign-out"></use>
+						</svg></a>
+					</div>
 				</div>
-				<div class="row"></div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<!-- start headerBlock-->
+			<div class="headerBlock section" id="headerBlock">
+				<div class="container">
+					<div class="headerBlock__row row">
+						<div class="headerBlock__col col-6 col-md-3"><a class="headerBlock__item" href="#"><span class="headerBlock__i-content"><span class="headerBlock__user"><span class="headerBlock__user-img"><img loading="lazy" src="img/@2x/profile-img.jpg" alt=""/></span><span class="headerBlock__user-name">mr.krutmen</span></span></span><span class="headerBlock__i-foot">Сменить аккаунт</span></a>
+						</div>
+						<div class="headerBlock__col col-6 col-md-3"><a class="headerBlock__item" href="#"><span class="headerBlock__i-content"><span class="headerBlock__item-img"><img loading="lazy" src="img/svg/heart_bag.svg" alt=""/></span></span><span class="headerBlock__i-foot">Биржа</span></a>
+						</div>
+						<div class="headerBlock__col col-6 col-md-3"><a class="headerBlock__item" href="#"><span class="headerBlock__i-content"><span class="headerBlock__item-img"><img loading="lazy" src="img/svg/heart.svg" alt=""/></span></span><span class="headerBlock__i-foot">Самопиар</span></a>
+						</div>
+						<div class="headerBlock__col col-6 col-md-3"><a class="headerBlock__vip-item link-modal" href="#vip-modal"><span class="headerBlock__vip-bg"><img loading="lazy" src="img/svg/diamond-bg.svg" alt=""/></span><span class="headerBlock__vip-content"><span class="headerBlock__vip-title">Внимание!</span><span class="headerBlock__vip-txt">
+							Мы можем следить за вашим
+							instagram и автоматически
+							ставить
+							
+							<svg class="icon icon-heart ">
+								<use xlink:href="img/svg/sprite.svg#heart"></use>
+							</svg>
+							и
+							
+							<svg class="icon icon-eye ">
+								<use xlink:href="img/svg/sprite.svg#eye"></use>
+							</svg>
+							на новые публикации</span></span></a>
+						</div>
+						<div class="headerBlock__col col-12 col-lg-6">
+							<div class="headBaner">
+								<div class="headBaner__bg"><img loading="lazy" src="img/svg/bg-action.svg" alt=""/>
+								</div>
+								<div class="headBaner__txt-bl">
+									<div class="headBaner__title">Проверьте работу биржи!
+									</div>
+									<div class="headBaner__txt">
+										Закажите 50
+										
+										<svg class="icon icon-heart ">
+											<use xlink:href="img/svg/sprite.svg#heart"></use>
+										</svg>
+										на последние 27 публикаций
+									</div>
+								</div><a class="headBaner__btn link-modal" href="#modal-check"><span>Всего за 99</span><span class="rub-mark">₽</span></a>
+							</div>
+						</div>
+						<div class="headerBlock__col col-12 col-lg-6">
+							<div class="headBaner">
+								<div class="headBaner__bg"><img loading="lazy" src="img/svg/bg-action.svg" alt=""/>
+								</div>
+								<div class="headBaner__txt-bl">
+									<h2 class="headBaner__title">Бонус за каждый аккаунт.
+									</h2>
+									<div class="headBaner__txt">
+										Получите 100
+										
+										<svg class="icon icon-heart ">
+											<use xlink:href="img/svg/sprite.svg#heart"></use>
+										</svg>
+										на баланс прямо сейчас!
+									</div>
+								</div><a class="headBaner__btn link-modal" href="#add-insta">Получить</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+			<!-- end headerBlock-->
+			<!-- start sHow-->
+			<section class="sHow section" id="sHow">
+				<div class="container">
+					<div class="sHow__inner">
+						<div class="section-title text-center">
+							<h2>Как получить лайки и просмотры?</h2>
+						</div>
+						<div class="sHow__row row">
+							<div class="sHow__col col-6 col-sm-4">
+								<div class="sHow__item">
+									<div class="sHow__img-cont">
+										<div class="sHow__img"><img loading="lazy" src="img/svg/sHow-1.svg" alt=""/>
+										</div>
+									</div>
+									<div class="sHow__txt">Заходите в<br class="d-none d-md-block"/>раздел
+										<a href="#">самопиар</a>
+									</div>
+								</div>
+							</div>
+							<div class="sHow__col col-6 col-sm-4">
+								<div class="sHow__item">
+									<div class="sHow__img-cont">
+										<div class="sHow__img"><img loading="lazy" src="img/svg/sHow-2.svg" alt=""/>
+										</div>
+									</div>
+									<div class="sHow__txt">Выбирайте публикацию и<br class="d-none d-lg-block"/>количество лайков и просмотров
+									</div>
+								</div>
+							</div>
+							<div class="sHow__col col-6 col-sm-4">
+								<div class="sHow__item">
+									<div class="sHow__img-cont">
+										<div class="sHow__img"><img loading="lazy" src="img/svg/sHow-3.svg" alt=""/>
+										</div>
+									</div>
+									<div class="sHow__txt">Она попадет на биржу,<br class="d-none d-lg-block"/>люди ставят лайки и просмотры
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sHow-->
+			<!-- start sCharts-->
+			<div class="sCharts section" id="sCharts">
+				<div class="container">
+					<div class="sCharts__row row">
+						<div class="sCharts__col col-lg-6">
+							<div class="sCharts__item">
+								<div class="sCharts__title">
+									<h2 class="sCharts__txt">Лайков поставлено на ваши публикации
+									</h2>
+									<div class="tooltip">
+										<div class="tooltip__tt-img">
+											<svg class="icon icon-question-sign ">
+												<use xlink:href="img/svg/sprite.svg#question-sign"></use>
+											</svg>
+										</div>
+										<div class="tooltip__tt-txt">Сколько лайков в день Вам ставям люди в нашем сервисе.
+										</div>
+									</div>
+								</div>
+								<div class="sCharts__chart-cont">
+									<div id="likeUser"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sCharts__col col-lg-6">
+							<div class="sCharts__item">
+								<div class="sCharts__title">
+									<h2 class="sCharts__txt">Лайки на последних публикациях
+									</h2>
+									<div class="tooltip">
+										<div class="tooltip__tt-img">
+											<svg class="icon icon-question-sign ">
+												<use xlink:href="img/svg/sprite.svg#question-sign"></use>
+											</svg>
+										</div>
+										<div class="tooltip__tt-txt">Среднее количество лайков на ваших последних публикациях.
+										</div>
+									</div><a class="sCharts__refresh-btn" href="#">
+									<svg class="icon icon-refresh ">
+										<use xlink:href="img/svg/sprite.svg#refresh"></use>
+									</svg></a>
+								</div>
+								<div class="sCharts__chart-cont">
+									<div id="likeLast"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sCharts-->
+			<footer class="footer block-with-lazy">
+				<div class="footer__container container">
+					<div class="footer__id-bl">
+						<div class="footer__id-txt">Ваш ID:
+						</div>
+						<div class="footer__id">746421
+						</div>
+					</div><a class="footer__support" href="#">Тех. поддержка</a>
+				</div>
+			</footer>
 		</div>
-		<!-- end headerBlock-->
-		<!-- start sForm-->
-		<section class="sForm section" id="sForm">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>sForm</h2>
-				</div>
-				<div class="row"></div>
-			</div>
-		</section>
-		<!-- end sForm-->
-		<!-- start sContact-->
-		<section class="sContact section" id="sContact">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>sContact</h2>
-				</div>
-				<div class="row"></div>
-			</div>
-		</section>
-		<!-- end sContact-->
-		<footer class="footer block-with-lazy">
-			<div class="container">
-				<h2>footer</h2>
-			</div>
-		</footer>
-		<!--  start modals-->
-		<div class="modal-win" id="modal-call" style="display: none">
+		<!--complain modal-->
+		<div class="complain-modal default-modal" id="manager-complain" style="display: none">
 			<div class="form-wrap">
 				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="text-center">
-						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+					<div class="form-wrap__title">Пожаловаться на менеджера
+					</div>
+					<div class="form-wrap__content">
+						<div class="form-wrap__small">Друзья, мы внимательно следим за качеством работы наших менеджеров. Если вам долго отвечают или некорректны в общении, пожалуйста, напишите на этот адрес:
+						</div><a class="form-wrap__btn-light" href="mailto:hello@markluigi.com">hello@markluigi.com</a>
+						<div class="form-wrap__small">
+							К сообщению приложите ваш пинкод
+							<span class="text-warning">746421_9077</span>
+							и скриншоты переписки с менеджером. Если факт некорректного общения или игнорирования будет подтвержден, менеджер понесет наказание, а Вы получите компенсацию
 						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta at blanditiis error quis incidunt ratione. Expedita ullam repellendus possimus eos ex quidem quisquam quam voluptatum ipsa doloremque molestias accusamus rem deserunt tenetur incidunt exercitationem laboriosam consequuntur, repudiandae dolore odit earum voluptatibus autem amet! Eligendi omnis necessitatibus at accusamus excepturi, debitis magnam alias. Dolore voluptatum hic assumenda quo non facilis sed sint fugit ex quam. Natus eligendi sequi repellat earum doloremque vero consequatur repudiandae ipsam libero odit alias quia expedita magni fugit perspiciatis aperiam maxime illo, voluptatem omnis tenetur suscipit molestias beatae distinctio totam? Excepturi quaerat dolorum natus reprehenderit voluptas officiis totam recusandae harum autem ipsum laboriosam dolorem, tempore, maxime nam dignissimos aperiam cupiditate accusantium deleniti. Iusto harum facere blanditiis minima dolor assumenda error nisi soluta perferendis animi? Distinctio maxime, perspiciatis neque dignissimos reprehenderit obcaecati quo provident, dolores labore laborum adipisci at veniam reiciendis aliquam nemo minus cumque sequi quasi architecto aliquid magnam tempore expedita? Repellendus veniam est dicta nihil, aspernatur molestiae ducimus quibusdam voluptatibus saepe. Repudiandae itaque rem animi voluptas voluptate? Expedita numquam architecto totam quo quod quibusdam ut, rem earum, similique dolorum excepturi nobis quis, tempore et exercitationem repellendus! Ipsa, consequuntur praesentium quaerat excepturi voluptas, delectus maiores necessitatibus explicabo consequatur neque optio doloremque temporibus similique doloribus pariatur velit aliquam magni cum! Repellat mollitia quam saepe porro, culpa unde! Molestias laboriosam vitae nihil facere corporis cupiditate eos ea saepe dolorem, eaque laudantium quam distinctio, fugit placeat maxime enim dicta rem eligendi accusamus, eum id. Incidunt, illum quaerat ab modi iste quasi non laboriosam unde, atque fugit delectus cumque eligendi sapiente dolore autem omnis alias, adipisci dicta illo corrupti optio? Esse error numquam fugit itaque ipsam fugiat nostrum repudiandae recusandae, nobis repellat aperiam officiis labore possimus neque velit, a obcaecati illum quasi suscipit veritatis! Ea earum obcaecati impedit possimus adipisci vitae animi commodi consequatur omnis amet? Quod sed doloremque id nesciunt iure recusandae iste voluptatibus unde eligendi porro nulla architecto voluptates quasi temporibus, fugit asperiores quis! Facere non, illo quisquam cumque voluptate earum voluptatem corporis eum cum commodi omnis autem sequi nisi sit iure aperiam iusto dolor harum? Ex eligendi vero reiciendis culpa ipsa suscipit debitis, quam earum maxime. Nemo officia quasi consequuntur velit rem culpa ipsa quas earum excepturi amet fuga eum consequatur, repellendus commodi facere maxime. Magni voluptas consequatur facere dolores ut culpa, expedita fugit? Quae placeat asperiores est, fuga eligendi eius similique necessitatibus explicabo? Eveniet corporis tempora reiciendis, dolore ipsam quos aut ea alias amet nihil? Excepturi maiores mollitia inventore voluptate est ullam reprehenderit itaque iure quasi non molestias, vel veniam alias! Obcaecati laudantium ex incidunt autem ipsam a suscipit, in dolorem error deserunt minima laborum nulla facere officia sunt. Aliquid repellat rem sunt reprehenderit. Fugit perferendis officiis labore nesciunt pariatur optio minima aperiam et similique maxime odio laudantium eligendi deleniti culpa exercitationem impedit, fugiat magni vero temporibus eos obcaecati esse possimus asperiores dolores! Quod iure eius minus adipisci? Architecto sapiente corrupti error! Magni ea tempore laboriosam minus totam facilis iure voluptates nostrum officiis dignissimos nihil necessitatibus quam in, commodi molestiae expedita facere asperiores ad! Corporis delectus magnam, vel aspernatur rem laboriosam autem soluta aliquam iure impedit? Deserunt ad nam excepturi, quibusdam qui nisi necessitatibus, voluptatibus deleniti quo cumque ipsam cum repudiandae impedit in a laborum dignissimos ratione labore vitae officia quaerat magnam. Saepe ullam omnis harum reprehenderit beatae pariatur est? Animi dolores necessitatibus corrupti velit architecto obcaecati doloremque vero sapiente quaerat praesentium? Veniam illum iusto ea sunt deserunt, omnis consequatur est adipisci aliquid magnam quibusdam animi debitis magni excepturi accusamus vel facilis ipsa blanditiis expedita cumque fugiat! Aspernatur voluptatum quos corrupti blanditiis? Sapiente pariatur sunt culpa nesciunt consequatur eaque veritatis laborum possimus, saepe at nam amet exercitationem assumenda temporibus illo aliquid asperiores quae impedit beatae voluptatem? Vitae, totam quos odio nobis perferendis unde! Voluptates voluptatum, sint iure aliquid quis quod voluptatem saepe et similique, repellendus dolorum. Sed vel illo quisquam cum aut, ullam impedit quaerat a odit alias fugit repudiandae. Consequuntur voluptas explicabo eligendi, beatae esse nihil laborum illo rerum ab dolorum nemo iste est doloremque magnam. Repellendus in voluptates cumque ullam, cum odio quam deserunt optio doloremque modi nobis itaque cupiditate ea, neque exercitationem laborum, obcaecati mollitia earum debitis accusamus nisi dolorem autem libero dicta! Atque ad doloribus distinctio cumque nobis labore placeat? Necessitatibus, accusamus deleniti numquam asperiores distinctio tempora consectetur minus veritatis cum repellat architecto voluptatibus minima omnis aliquam fugit maiores eos veniam consequatur, rerum ex illo facere? Suscipit distinctio qui quae asperiores voluptates nobis unde, nisi soluta natus aspernatur tempore libero, nam iure? Modi, explicabo iusto tenetur placeat praesentium, sunt voluptatum soluta reiciendis quam atque hic dolorum in, esse consequuntur voluptate animi doloremque saepe expedita voluptates? Consectetur sint assumenda quaerat deleniti. Exercitationem, quas beatae. Ut ipsam eum nisi fugiat numquam saepe tempore dolorem necessitatibus consequatur, voluptatem eligendi magni laborum nostrum sed accusamus ducimus laudantium minus animi. Totam expedita vero voluptas libero ipsa! Facilis ullam vel libero aliquam sit itaque quasi delectus a rerum laborum, possimus, eos inventore nulla, excepturi exercitationem aliquid unde porro. Odio nulla labore repellat exercitationem cupiditate voluptates, obcaecati asperiores eligendi delectus commodi deserunt provident sit nam praesentium culpa cum amet explicabo, nisi dolores? Recusandae provident veritatis porro corporis voluptatem assumenda necessitatibus at. Sint quam in facere nihil hic cupiditate porro sapiente nisi, et ratione placeat commodi unde excepturi error repellat earum perspiciatis quisquam amet tempora. Expedita, ipsum? Molestias mollitia voluptatum sapiente inventore, perspiciatis ab laudantium, voluptatibus amet aliquid laborum autem? Adipisci aliquid voluptatum numquam quas quia ullam error sed illo, sit minima, consectetur temporibus unde? Rerum minima necessitatibus est expedita assumenda nesciunt, modi ea fugiat consectetur ad corporis velit ducimus quia aut cumque iusto voluptatibus et perferendis ipsum! Excepturi perferendis veritatis cumque quo, quod facere facilis impedit magnam numquam repellat ad tempora! Pariatur distinctio laborum, quaerat dolorem nostrum totam animi. Ipsa distinctio consectetur explicabo culpa, esse reprehenderit eveniet obcaecati, repudiandae dolorum vero expedita modi exercitationem iure aut provident sit cum adipisci consequatur id delectus voluptatum fuga ducimus natus. Cum, aperiam impedit error illo hic similique quo iure omnis ullam sapiente modi.</p>
-					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
-					</div>
-					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
-					</button>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
+						<div class="form-wrap__gray-bl">На почту отвечает супервайзер. Его задача – контролировать менеджеров. Увы, он не обладает информацией о работе сервиса или ответом на какие-либо технические вопросы.
+						</div>
 					</div>
 				</form>
 			</div>
 		</div>
-		<!-- #modal-call-->
-		<!-- end modals-->
+		<!--vip-modal-->
+		<div class="vip-modal" id="vip-modal" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__title">
+						<h2>Популярность без забот</h2>
+						<p>Каждый новый пост или история в вашем instagram, автоматически попадет на биржу и начнет собирать подписки, лайки и просмотры.</p>
+					</div>
+					<div class="form-wrap__content">
+						<div class="form-wrap__row row">
+							<div class="form-wrap__col col-12">
+								<div class="form-wrap__white-bl">
+									Друзья, в связи с изменениями лайкинга в инстаграм есть сложности с дохождением лайков. Сториесы и просмотры видео
+									<b>работают хорошо.</b>
+									Пожалуйста, держите связь с вашим персональным менеджером, чтобы быть в курсе ситуации.
+								</div>
+							</div>
+							<div class="form-wrap__col col-12 col-md-6">
+								<div class="form-wrap__item">
+									<div class="form-wrap__col-title">1. Какой пакет Вы хотите?
+									</div>
+									<div class="form-wrap__radio-column">
+										<label class="form-wrap__col-radio">
+											<input type="radio" name="column-radio" checked="checked"/>
+											<div class="inner"><span class="form-wrap__like-bl"><span class="form-wrap__like-txt">100</span>
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg></span><span class="form-wrap__amount-bl"><span class="form-wrap__amount-txt">на каждый новый пост</span><span class="form-wrap__amount-number"><span>300</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												story и
+												<span>300</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												видео</span></span>
+											</div>
+										</label>
+										<label class="form-wrap__col-radio">
+											<input type="radio" name="column-radio"/>
+											<div class="inner"><span class="form-wrap__like-bl"><span class="form-wrap__like-txt">200</span>
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg></span><span class="form-wrap__amount-bl"><span class="form-wrap__amount-txt">на каждый новый пост</span><span class="form-wrap__amount-number"><span>600</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												story и
+												<span>600</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												видео</span></span>
+											</div>
+										</label>
+										<label class="form-wrap__col-radio">
+											<input type="radio" name="column-radio"/>
+											<div class="inner"><span class="form-wrap__like-bl"><span class="form-wrap__like-txt">500</span>
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg></span><span class="form-wrap__amount-bl"><span class="form-wrap__amount-txt">на каждый новый пост</span><span class="form-wrap__amount-number"><span>1 500</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												story и
+												<span>1 500</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												видео</span></span>
+											</div>
+										</label>
+										<label class="form-wrap__col-radio">
+											<input type="radio" name="column-radio"/>
+											<div class="inner"><span class="form-wrap__like-bl"><span class="form-wrap__like-txt">1 000</span>
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg></span><span class="form-wrap__amount-bl"><span class="form-wrap__amount-txt">на каждый новый пост</span><span class="form-wrap__amount-number"><span>3 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												story и
+												<span>3 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												видео</span></span>
+											</div>
+										</label>
+										<label class="form-wrap__col-radio">
+											<input type="radio" name="column-radio"/>
+											<div class="inner"><span class="form-wrap__like-bl"><span class="form-wrap__like-txt">2 000</span>
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg></span><span class="form-wrap__amount-bl"><span class="form-wrap__amount-txt">на каждый новый пост</span><span class="form-wrap__amount-number"><span>6 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												story и
+												<span>6 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												видео</span></span>
+											</div>
+										</label>
+										<label class="form-wrap__col-radio">
+											<input type="radio" name="column-radio"/>
+											<div class="inner"><span class="form-wrap__like-bl"><span class="form-wrap__like-txt">5 000</span>
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg></span><span class="form-wrap__amount-bl"><span class="form-wrap__amount-txt">на каждый новый пост</span><span class="form-wrap__amount-number"><span>15 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												story и
+												<span>15 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												видео</span></span>
+											</div>
+										</label>
+										<label class="form-wrap__col-radio">
+											<input type="radio" name="column-radio"/>
+											<div class="inner"><span class="form-wrap__like-bl"><span class="form-wrap__like-txt">10 000</span>
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg></span><span class="form-wrap__amount-bl"><span class="form-wrap__amount-txt">на каждый новый пост</span><span class="form-wrap__amount-number"><span>30 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												story и
+												<span>30 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												видео</span></span>
+											</div>
+										</label>
+										<label class="form-wrap__col-radio">
+											<input type="radio" name="column-radio"/>
+											<div class="inner"><span class="form-wrap__like-bl"><span class="form-wrap__like-txt">15 000</span>
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg></span><span class="form-wrap__amount-bl"><span class="form-wrap__amount-txt">на каждый новый пост</span><span class="form-wrap__amount-number"><span>45 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												story и
+												<span>45 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												видео</span></span>
+											</div>
+										</label>
+										<label class="form-wrap__col-radio">
+											<input type="radio" name="column-radio"/>
+											<div class="inner"><span class="form-wrap__like-bl"><span class="form-wrap__like-txt">25 000</span>
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg></span><span class="form-wrap__amount-bl"><span class="form-wrap__amount-txt">на каждый новый пост</span><span class="form-wrap__amount-number"><span>75 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												story и
+												<span>75 000</span>
+												<svg class="icon icon-eye ">
+													<use xlink:href="img/svg/sprite.svg#eye"></use>
+												</svg>
+												видео</span></span>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-wrap__col col-12 col-md-6">
+								<div class="form-wrap__item">
+									<div class="form-wrap__col-title">2. На сколько активировать VIP?
+									</div>
+									<div class="form-wrap__radio-inline">
+										<label class="form-wrap__inline-radio">
+											<input type="radio" name="inline-raio" checked="checked"/>
+											<div class="inner"><span class="form-wrap__days-num">15</span><span class="form-wrap__days-txt">дней</span>
+											</div>
+										</label>
+										<label class="form-wrap__inline-radio">
+											<input type="radio" name="inline-raio"/>
+											<div class="inner"><span class="form-wrap__days-num">30</span><span class="form-wrap__days-txt">дней</span>
+											</div>
+										</label>
+										<label class="form-wrap__inline-radio">
+											<input type="radio" name="inline-raio"/>
+											<div class="inner"><span class="form-wrap__days-num">45</span><span class="form-wrap__days-txt">дней</span>
+											</div>
+										</label>
+									</div>
+									<div class="form-wrap__present-block">
+										<div class="form-wrap__present-txt"><span>+</span><span class="subsc-present">100</span>
+											<svg class="icon icon-user ">
+												<use xlink:href="img/svg/sprite.svg#user"></use>
+											</svg>
+											подписчиков<br/>бонус в подарок!
+										</div>
+									</div>
+									<label class="form-wrap__auto-continue">
+										<input type="checkbox" name="auto-continue"/><span class="checkbox-circle"></span><span class="auto-txt"><span class="tooltip"><span class="tooltip__tt-img">
+											<svg class="icon icon-question-sign ">
+												<use xlink:href="img/svg/sprite.svg#question-sign"></use>
+											</svg></span><span class="tooltip__tt-txt">Если опция активирована, за 3 дня до ее окончания система автоматически продлит VIP на 1 месяц. А с вашей карты будет списана месячная стоимость услуги.</span></span><span>Продлевать VIP автоматически</span></span>
+									</label>
+									<div class="form-wrap__activate-bl">
+										<div class="form-wrap__price"><span>177 690</span><span class="rub-symb">₽</span>
+										</div>
+										<button class="form-wrap__act-btn" type="submit">Активировать
+										</button>
+									</div>
+									<div class="form-wrap__gray-bl">
+										<p>Сразу после оплаты сервис начнет следить за вашим instagram.</p>
+										<p>Как только вы разместите новую публикацию, люди автоматически начнут подписываться, ставить лайки и увеличивать просмотры.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--add-insta modal-->
+		<div class="add-insta-modal default-modal" id="add-insta" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__img"><img loading="lazy" src="img/@2x/insta-img.png" alt=""/>
+					</div>
+					<h2 class="form-wrap__title">Добавить аккаунт
+					</h2>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваш Instagram" name="text"/>
+						<svg class="icon icon-instagram ">
+							<use xlink:href="img/svg/sprite.svg#instagram"></use>
+						</svg>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__small">Для вас будут доступны все функции сервиса, кроме бесплатных сердечек. Их необходимо покупать.
+					</div>
+					<button class="form-wrap__btn" type="submit">Добавить
+					</button>
+				</form>
+			</div>
+		</div>
+		<!--modal-check-->
+		<div class="modal-check yellow-top" id="modal-check" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__title">
+						<h2>Закажите 50 лайков и<br class="d-none d-sm-block"/>150 просмотров на 27 последних публикаций по суперцене!</h2>
+					</div>
+					<div class="form-wrap__content">
+						<div class="form-wrap__gray-bl">
+							<p>Через несколько минут после оплаты, мы разместим ваши последние 27 публикаций на биржу.</p>
+							<p>
+								Менее чем за сутки, живые люди поставят более
+								<b>50 лайков</b>
+								и<b>150 просмотров</b>
+								на каждую вашу публикацию.
+							</p>
+						</div>
+						<div class="form-wrap__foot"><a class="form-wrap__more-btn" href="#"><span>Хочу больше</span>
+							<svg class="icon icon-heart ">
+								<use xlink:href="img/svg/sprite.svg#heart"></use>
+							</svg></a><a class="form-wrap__pay-btn" href="#"><span>Оплатить</span><span>99</span><span class="rub-symb">₽</span></a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="pay-modal default-modal" id="pay-modal" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__title">
+						<h2>Оплата</h2>
+						<p>
+							Выберите удобный способ оплаты
+							<span>99 рублей,</span>
+							услуга будет доступна сразу после оплаты.
+						</p>
+					</div>
+					<div class="form-wrap__items"><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-1.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-2.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-3.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-4.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-5.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-6.svg" alt=""/></a>
+					</div>
+					<div class="form-wrap__foot"><span>Технический код:</span><span>lf.746421.32196447713.pAll|99</span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="price-modal yellow-top" id="price-modal" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__title">
+						<h2>
+							Разместите
+							<span>10</span>
+							последних публикаций на биржу по суперцене!
+						</h2>
+					</div>
+					<div class="form-wrap__content">
+						<div class="form-wrap__amunt-radio">
+							<div class="form-wrap__am-txt">Последние
+							</div>
+							<div class="form-wrap__am-items">
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio" checked="checked"/>
+									<div class="inner">10</div>
+								</label>
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio"/>
+									<div class="inner">20</div>
+								</label>
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio"/>
+									<div class="inner">30</div>
+								</label>
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio"/>
+									<div class="inner">40</div>
+								</label>
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio"/>
+									<div class="inner">50</div>
+								</label>
+							</div>
+							<div class="form-wrap__how-much">Сколько лайков и просмотров вы<br/>хотите на каждую публикацию?
+							</div>
+							<div class="form-wrap__range-inp">
+								<div class="range-wrap price_slider_amount with-symbol">
+									<div class="row">
+										<div class="col-6">
+											<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+												<div class="money-symb">₽</div>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+												<div class="money-symb">₽</div>
+											</div>
+										</div>
+									</div>
+									<input class="range-slider slider-js" type="text" data-min="10000" data-max="999999"/>
+								</div>
+							</div>
+							<div class="form-wrap__add-txt"><span>Видео получат еще по</span><span>120</span>
+								<svg class="icon icon-eye ">
+									<use xlink:href="img/svg/sprite.svg#eye"></use>
+								</svg>
+							</div>
+							<div class="form-wrap__foot">
+								<div class="form-wrap__price"><span>10 000</span><span class="rub-symb">₽</span>
+								</div><a class="form-wrap__pay-btn" href="#"><span>Оплатить</span>
+								<svg class="icon icon-cart ">
+									<use xlink:href="img/svg/sprite.svg#cart"></use>
+								</svg></a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end modals-->
+		</div>
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<!-- modal libs-->
@@ -167,7 +650,11 @@
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"></script>
-		<!-- /slider libs-->
+		<!-- /slider libs--><script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+		<!--range slider-->
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>

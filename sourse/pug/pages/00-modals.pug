@@ -1,0 +1,32 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sCharts/_sCharts.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '00-modals'
+	title= title
+block pagecontent
+	.main-wrapper
+		+mob-mnu()
+		+header()
+			+top-nav()
+		.container
+			h2 Modals (all)
+			.btn.btn-primary.link-modal(href="#manager-complain") manager-complain
+			.btn.btn-primary.link-modal(href="#vip-modal") vip-modal
+			.btn.btn-primary.link-modal(href="#add-insta") add-insta
+			.btn.btn-primary.link-modal(href="#modal-check") modal-check
+			.btn.btn-primary.link-modal(href="#pay-modal") pay-modal
+			.btn.btn-primary.link-modal(href="#price-modal") price-modal
+			.btn.btn-primary.link-modal(href="#")
+			.btn.btn-primary.link-modal(href="#")
+		+footer()
+
+
+	
