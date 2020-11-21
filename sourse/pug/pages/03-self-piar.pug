@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sCharts/_sCharts.pug
+include ../blocks/sExchange/_sExchange.pug
+include ../blocks/sPhotoes/_sPhotoes.pug
+include ../blocks/sSelfPiar/_sSelfPiar.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '03-self-piar'
+	title= title
+block pagecontent
+	.main-wrapper
+		+mob-mnu()
+		+header()
+			+top-nav()
+		+sSelfPiar()
+
+		//+sPhotoes()
+		+footer()
+
+
+	

@@ -76,7 +76,7 @@
 
 			@include mt();
 			color: $body-color;
-			&:hover{
+			&:hover, &.active{
 				color: $black;
 				text-shadow: 0 0 .8px rgba($black, .8);
 				&:after{

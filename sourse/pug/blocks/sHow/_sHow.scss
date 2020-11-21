@@ -12,21 +12,7 @@
 		border-radius: rem(4);
 
 		background-color: $white;
-		position: relative;
-		z-index: 1;
-		&:before{
-			content: '';
-			position: absolute;
-			z-index: -1;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			border-radius: rem(4);
-			opacity: .1;
-
-			background: $white url(../img/svg/diamond-bg2.svg) repeat center / 150px;
-		}
+		@extend .white-diamond-bg;
 	}
 	.section-title{
 		h2{
@@ -48,6 +34,18 @@
 		}
 		&:last-child{
 			margin-bottom: 0;
+		}
+
+		&:nth-child(2){
+			.sHow__img-cont{
+				width: rem(160);
+				.sHow__img{
+					padding-top: 93.5%;
+					@include media-breakpoint-up(md){
+						padding-top: 93%;
+					}
+				}
+			}
 		}
 	}
 	&__item{

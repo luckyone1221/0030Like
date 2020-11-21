@@ -1,0 +1,45 @@
+mixin sSelfPiar(data)
+	// start sSelfPiar
+	+b.SECTION.sSelfPiar.section#sSelfPiar&attributes(attributes)
+		.container
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Активные задачи
+					.tabs__btn Завершенные
+				.tabs__wrap
+					.tabs__content.active
+						+e.how
+							+e.like-all-btn.link-modal(href="#price-modal")
+								span Лайки на все старые публикации
+								+icon('rocket')
+							+e.H2.how-title Как получить лайки и просмотры?
+							+e.how-inner
+								+e.row.row
+									+selfPiarHowItem(2)
+										| Вы выбираете
+										| публикацию
+									+selfPiarHowItem(4)
+										| Она попадает на биржу,
+										| где люди ставят вам лайки и просмотры
+									+selfPiarHowItem(3)
+										| Ваша популярность
+										| и позиции в поиске растут
+								+e.progress-bar
+									+e.pb-item
+									+e.pb-item
+									+e.pb-item
+						+sPhotoes()(class="sPhotoes--mar-min20")
+							- for( var i = 0; i < 15; i++)
+								+photoItem2(i)
+					.tabs__content
+						+e.tasks
+							+e.tasks-empty
+								p У вас нет завершенных заданий
+	// end sSelfPiar
+
+mixin selfPiarHowItem(imgNum)
+	+e.col.col-12.col-md-4
+		+e.img
+			img(loading="lazy" src=`img/svg/sHow-${imgNum}.svg` alt="")
+		+e.txt
+			block

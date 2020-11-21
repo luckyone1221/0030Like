@@ -1,0 +1,136 @@
+// start .sPhotoes
+.sPhotoes {
+	&--mar-min20{
+		margin: 0 -15px;
+	}
+
+	--sPT: 0;
+	--sPB: #{rem(20)};
+	@include media-breakpoint-up(md){
+		--sPB: #{rem(30)};
+	}
+
+	&__row{
+		@include roww(20px);
+		@include media-breakpoint-up(md){
+			@include roww(30px);
+		}
+	}
+	
+	&__inner{
+		border-radius: rem(8);
+		padding: 15px;
+		background-color: $white;
+	}
+	&__col{
+		margin-bottom: 20px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 30px;
+		}
+		&.col-lg-part-5{
+			@include media-breakpoint-up(lg){
+				width: 20%;
+			}
+		}
+	}
+	&__item{
+		display: block;
+		border-radius: rem(8);
+		overflow: hidden;
+		width: 100%;
+		padding-top: 100%;
+		height: 0;
+
+		position: relative;
+		z-index: 1;
+
+		img{
+			@include mt();
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		--innerItemVisibility: 0;
+		&:hover{
+			--innerItemVisibility: 1;
+			img{
+				transform: scale(1.1);
+			}
+		}
+
+	}
+	&__heart-bl{
+		@include mt();
+		opacity: var(--innerItemVisibility);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($black, .4);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		color: $white;
+		font-weight: bold;
+		span{
+			font-size: rem(22);
+			margin-bottom: rem(5);
+		}
+		.icon{
+			display: inline;
+			font-size: rem(40);
+			color: rgba($danger, .75);
+		}
+	}
+
+	&__refresh-btn{
+		@extend .btn;
+		@extend .btn-light;
+		margin-bottom: rem(15);
+
+		border: 1px solid $secondary !important;
+		background-color: $white;
+
+		min-width: 100%;
+		@include media-breakpoint-up(sm){
+			min-width: 60%;
+		}
+	}
+	&__bot-likes{
+		@include mt();
+		transform: scaleY(var(--innerItemVisibility));
+		transform-origin: bottom center;
+
+		padding: rem(5);
+		background-color: rgba($black, .3);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-size: $small;
+		color: $light;
+		.icon{
+			display: inline;
+			vertical-align: baseline;
+			font-size: rem(12);
+			margin-left: rem(5);
+			color: currentColor;
+		}
+	}
+	//
+	&__{}
+	&__{}
+} // end.sPhotoes

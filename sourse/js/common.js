@@ -113,30 +113,30 @@ const JSCCommon = {
 	// табы  .
 	tabscostume(tab) {
 
-		let tabs = {
-			Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
-			BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
-			Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
-		}
-		tabs.Btn.forEach((element, index) => {
-			element.addEventListener('click', () => {
-				if (!element.classList.contains('active')) {
-					let siblings = element.parentNode.querySelector(`.${tab}__btn.active`);
-					let siblingsContent = tabs.Content[index].parentNode.querySelector(`.${tab}__content.active`);
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active')
-					element.classList.add('active');
-					tabs.Content[index].classList.add('active');
-				} 
-			})
-		})
-		// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
+		// let tabs = {
+		// 	Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
+		// 	BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
+		// 	Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
+		// }
+		// tabs.Btn.forEach((element, index) => {
+		// 	element.addEventListener('click', () => {
+		// 		if (!element.classList.contains('active')) {
+		// 			let siblings = element.parentNode.querySelector(`.${tab}__btn.active`);
+		// 			let siblingsContent = tabs.Content[index].parentNode.querySelector(`.${tab}__content.active`);
+		// 			siblings.classList.remove('active');
+		// 			siblingsContent.classList.remove('active')
+		// 			element.classList.add('active');
+		// 			tabs.Content[index].classList.add('active');
+		// 		}
+		// 	})
+		// })
 
-		// });
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			$(this)
+				.addClass('active').siblings().removeClass('active')
+				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+				.eq($(this).index()).fadeIn().addClass('active');
+		});
 
 	},
 	// /табы
@@ -417,80 +417,22 @@ function eventHandler() {
 
 		}); // end am4core.ready()
 	}
-	createCommonChart2("likeUser", dataArrExample, '#20c997');
-	createCommonChart2("likeLast", dataArrExample, '#d65988');
+	if (document.getElementById('likeUser')){
+		createCommonChart2("likeUser", dataArrExample, '#20c997');
+	}
+	if (document.getElementById('likeLast')){
+		createCommonChart2("likeLast", dataArrExample, '#d65988');
+	}
+
 
 
 	//range slider
-	function currencyFormat(num) {
-		return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
-	}
-
-	$(".range-wrap").each(function () {
-		let _this = $(this);
-		var $range= _this.find(".slider-js");
-		var $inputFrom = _this.find(".input_from");
-		var $inputTo = _this.find(".input_to");
-		var instance, from, to,
-			min = $range.data('min'),
-			max = $range.data('max');
-		$range.ionRangeSlider({
-			skin: "round",
-			type: "double",
-			grid: false,
-			grid_snap: false,
-			hide_min_max: true,
-			hide_from_to: true,
-			onStart: updateInputs,
-			onChange: updateInputs,
-			onFinish: updateInputs
-		});
-		instance = $range.data("ionRangeSlider");
-
-		function updateInputs(data) {
-			from = data.from;
-			to = data.to;
-
-			$inputFrom.prop("value", currencyFormat(from));
-			$inputTo.prop("value", currencyFormat(to));
-			// InputFormat();
-		}
-
-		$inputFrom.on("change input ", function () {
-			var val = +($(this).prop("value").replace(/\s/g, ''));
-			// validate
-			if (val < min) {
-				val = min;
-			} else if (val > to) {
-				val = to;
-			}
-
-			instance.update({
-				from: val
-			});
-			$(this).prop("value", currencyFormat(val));
-			console.log(val)
-		});
-
-		$inputTo.on("change input ", function () {
-			var val = +($(this).prop("value").replace(/\s/g, ''));
-
-			// validate
-			if (val < from) {
-				val = from;
-			} else if (val > max) {
-				val = max;
-			}
-
-			instance.update({
-				to: val
-			});
-			$(this).prop("value", currencyFormat(val));
-		});
-
+	$(".range-slider--js").ionRangeSlider({
+		from: 40,
+		step: 5,
+		postfix: " ❤",
+		prefix: "+",
 	});
-
-
 	//end am
 
 };

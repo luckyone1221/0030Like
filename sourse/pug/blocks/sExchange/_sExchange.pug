@@ -1,0 +1,50 @@
+mixin sExchange(data)
+	// start sExchange
+	+b.SECTION.sExchange.section#sExchange&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-12.col-lg-7
+					+e.item--left
+						+e.txt-bl
+							h2 Обменивайтесь лайками
+							p
+								| Ставьте лайки на чужие публикации и получайте 1
+								|
+								+icon('heart')
+								|
+								| на свой баланс.
+							p
+								| Затем заработанные
+								|
+								+icon('heart')
+								|
+								| тратьте на пиар своих  фото и видео в бирже.
+						+e.img
+							img(loading="lazy" src="img/svg/heart_bag.svg" alt="")
+				+e.col.col-12.col-lg-5
+					+e.item--right
+						+e.r-bg
+							img(loading="lazy" src='img/svg/statistics-bars.svg')
+						+e.H2.stat-title Статистика сегодня
+						+e.stat-bl
+							+e.s-item
+								+e.s-sub-title Выполнено заданий
+								+e.s-txt-bl
+									+e.s-txt--check
+										span 1 045
+										+icon('check')
+							+e.s-item
+								+e.s-sub-title Люди поставили
+								+e.s-txt-bl
+									+e.s-txt--heart
+										span 0
+										+icon('heart')
+									+e.s-txt--eye
+										span 1 796 900
+										+icon('eye')
+						+e.add-self(href='#')
+							+icon('plus')
+							span Добавить себя
+
+
+	// end sExchange

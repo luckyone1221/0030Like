@@ -20,6 +20,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body>
@@ -553,7 +554,7 @@
 			<div class="form-wrap">
 				<form>
 					<div class="form-wrap__title">
-						<h4>Оплата</h4>
+						<h2>Оплата</h2>
 						<p>
 							Выберите удобный способ оплаты
 							<span>99 рублей,</span>
@@ -563,6 +564,67 @@
 					<div class="form-wrap__items"><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-1.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-2.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-3.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-4.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-5.svg" alt=""/></a><a class="form-wrap__item" href="#"><img loading="lazy" src="img/svg/payment-6.svg" alt=""/></a>
 					</div>
 					<div class="form-wrap__foot"><span>Технический код:</span><span>lf.746421.32196447713.pAll|99</span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="price-modal yellow-top" id="price-modal" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__title">
+						<h3>
+							Разместите
+							<span>10</span>
+							последних публикаций на биржу по суперцене!
+						</h3>
+					</div>
+					<div class="form-wrap__content">
+						<div class="form-wrap__amunt-radio">
+							<div class="form-wrap__am-txt">Последние
+							</div>
+							<div class="form-wrap__am-items">
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio" checked="checked"/><span class="inner">10</span>
+								</label>
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio"/><span class="inner">20</span>
+								</label>
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio"/><span class="inner">30</span>
+								</label>
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio"/><span class="inner">40</span>
+								</label>
+								<label class="form-wrap__am-item">
+									<input type="radio" name="amount-radio"/><span class="inner">50</span>
+								</label>
+							</div>
+						</div>
+						<div class="form-wrap__how-much">Сколько лайков и просмотров вы<br/>хотите на каждую публикацию?
+						</div>
+						<div class="form-wrap__range-inp">
+							<div class="range-wrap with-symbol"><input class="range-slider range-slider--js" type="text" data-min="40" data-max="1000"/>
+							</div>
+						</div>
+						<div class="form-wrap__add-txt"><span>Видео получат еще по</span><span>120</span>
+							<svg class="icon icon-eye ">
+								<use xlink:href="img/svg/sprite.svg#eye"></use>
+							</svg>
+						</div>
+						<div class="form-wrap__gray-bl">
+							Менее чем за сутки, живые люди поставят более
+							<b>1000 лайков</b>
+							и
+							<b>3000 просмотров</b>
+							на каждую вашу публикацию.
+						</div>
+						<div class="form-wrap__foot">
+							<div class="form-wrap__price"><span>10 000</span><span class="rub-symb">₽</span>
+							</div><a class="form-wrap__pay-btn" href="#"><span>Оплатить</span>
+							<svg class="icon icon-cart ">
+								<use xlink:href="img/svg/sprite.svg#cart"></use>
+							</svg></a>
+						</div>
 					</div>
 				</form>
 			</div>
@@ -580,6 +642,8 @@
 		<!-- /slider libs--><script src="https://cdn.amcharts.com/lib/4/core.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+		<!--range slider-->
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>

@@ -434,3 +434,22 @@ a{
 		color: darken($pink, 10);
 	}
 }
+
+//
+.white-diamond-bg{
+	position: relative;
+	z-index: 1;
+	&:before{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: rem(4);
+		opacity: .1;
+
+		background: $white url(../img/svg/diamond-bg2.svg) repeat center / 150px;
+	}
+}

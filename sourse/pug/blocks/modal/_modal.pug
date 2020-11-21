@@ -135,7 +135,7 @@ mixin modal()
 	+b.price-modal.yellow-top(id="price-modal" style="display: none")
 		+form-wrap
 			+e.title
-				h2
+				h3
 					| Разместите
 					|
 					span 10
@@ -150,29 +150,46 @@ mixin modal()
 						+postRadio(30)
 						+postRadio(40)
 						+postRadio(50)
-					+e.how-much
-						| Сколько лайков и просмотров вы
-						br
-						| хотите на каждую публикацию?
-					+e.range-inp
-						+range("10000", "999999", '₽')(class='with-symbol')
-					+e.add-txt
-						span Видео получат еще по
-						span 120
-						+icon('eye')
-					+e.foot
-						+e.price
-							span 10 000
-							span.rub-symb ₽
-						+e.pay-btn(href="#")
-							span Оплатить
-							+icon('cart')
+				+e.how-much
+					| Сколько лайков и просмотров вы
+					br
+					| хотите на каждую публикацию?
+				+e.range-inp
+					+range("40", "1000", '₽')(class='with-symbol')
+				+e.add-txt
+					span Видео получат еще по
+					span 120
+					+icon('eye')
+				+e.gray-bl
+					| Менее чем за сутки, живые люди поставят более
+					|
+					b 1000 лайков
+					|
+					| и
+					|
+					b 3000 просмотров
+					|
+					| на каждую вашу публикацию.
+				+e.foot
+					+e.price
+						span 10 000
+						span.rub-symb ₽
+					+e.pay-btn(href="#")
+						span Оплатить
+						+icon('cart')
+	//oops modal
+	+b.oops-modal.default-modal(id="oops-modal" style="display: none")
+		+form-wrap
+			+e.img
+				img(loading="lazy" src="img/@2x/lock-img.png" alt="")
+			+e.txt Увы и Ах! Ставить лайки на бирже, могут лишь аккаунты, которые оставили заявку и прошли обучение.
+			+e.btn.modal-close-js ОК
 		// end modals
 
 mixin postRadio(val, name='amount-radio')
 	+e.LABEL.am-item
 		input(type="radio" name=name)&attributes(attributes)
-		.inner=val
+		span.inner=val
 
 mixin payItem(imgNum)
 	+e.item(href="#")
