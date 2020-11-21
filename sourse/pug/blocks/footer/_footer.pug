@@ -5,3 +5,10 @@ mixin footer()
 				+e.id-txt Ваш ID:
 				+e.id 746421
 			+e.support(href='#') Тех. поддержка
+
+mixin footerNoLog()
+	+b.FOOTER.footer--no-log.block-with-lazy
+		+e.container.container.d-block
+			+e.contact.text-center
+				span Contact us via e-mail:
+				a(href='mailto:support@lfvip.ru') support@lfvip.ru

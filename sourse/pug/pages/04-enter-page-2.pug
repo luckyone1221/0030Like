@@ -1,0 +1,32 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sHow/_sHow.pug
+include ../blocks/sCharts/_sCharts.pug
+include ../blocks/sExchange/_sExchange.pug
+include ../blocks/sPhotoes/_sPhotoes.pug
+include ../blocks/sSelfPiar/_sSelfPiar.pug
+include ../blocks/sEnter/_sEnter.pug
+
+block variables
+	- let  mainPage= 'enter-page'
+block title
+	- let  title= '04-enter-page-2'
+	title= title
+block pagecontent
+	+sEnter()
+		+e.dog
+			img(src="img/svg/enter-dog.svg" alt="")
+		+e.title
+			p Введите номер телефона в международном формате, через который вы регистрировались
+		+e.num-input
+			+input('Номер телефона', 'tel')
+				+icon('phone')
+			+e.num-btn(type="submit")
+				+icon('arrow-right')
+	+footerNoLog()
+
+
+	

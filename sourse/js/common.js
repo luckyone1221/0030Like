@@ -435,6 +435,13 @@ function eventHandler() {
 	});
 	//end am
 
+	//num inps
+	$('.code-inputs--js input').keypress(function (){
+		let allInps = document.querySelectorAll('.code-inputs--js input');
+
+		$(allInps[$.inArray( this,  allInps) + 1]).focus();
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

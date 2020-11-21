@@ -1,0 +1,144 @@
+// start .sEnter
+.sEnter {
+	--sPT: #{rem(50)};
+	--sPB: #{rem(50)};
+	flex-grow: 1;
+	background-color: $white;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+
+	&__container{
+		width: 300px;
+		min-height: 100%;
+		max-width: 100%;
+	}
+	&__dog{
+		margin-bottom: rem(20);
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+	}
+	&__title{
+		h4{
+			font-weight: bold;
+			margin-bottom: rem(10);
+		}
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+
+		margin-bottom: rem(30);
+	}
+	&__btn-log{
+		width: 100%;
+		@extend .btn;
+		@extend .btn-info;
+		margin-bottom: rem(10);
+
+		color: $white!important;
+	}
+	&__btn-reg{
+		width: 100%;
+		@extend .btn;
+		@extend .btn-info;
+
+		background-color: transparent;
+		&:hover{
+			background-color: $teal;
+			color: $white;
+		}
+	}
+	//02
+
+	&__num-input{
+		position: relative;
+	}
+	&__input-wrap{
+		position: relative;
+
+		input:focus + .icon, input:not([value]) + .icon{
+			color: rgba($teal, .5);
+		}
+
+		.icon{
+			@include mt();
+			color: $input-border-color;
+			//color: $primary;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 10px;
+			font-size: rem(22);
+		}
+	}
+	&__input{
+		padding-left: rem(40);
+		padding-right: rem(50);
+	}
+	&__num-btn{
+		width: rem(40);
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-radius: 0 rem(4) rem(4) 0;
+
+		@extend .btn;
+		@extend .btn-info;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:hover{
+			.icon{
+				transform: scale(1.1);
+			}
+		}
+		.icon{
+			display: inline;
+			vertical-align: baseline;
+			font-size: rem(16);
+			color: $white;
+		}
+	}
+	&__{}
+	&__{}
+
+	//end 02
+	&__{}
+	&__{}
+	&__{}
+
+} // end.sEnter
+
+//03
+.code-inputs{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: rem(20);
+
+	&__input-wrap{
+		margin: 0 rem(5);
+	}
+	&__input{
+		padding-left: rem(3);
+		padding-right: rem(3);
+		text-align: center;
+	}
+	span{
+		margin: 0 rem(10);
+		font-size: rem(24);
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+}
+//

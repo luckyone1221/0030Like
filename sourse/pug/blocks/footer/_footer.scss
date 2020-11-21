@@ -1,6 +1,31 @@
 .footer {
 	background-color: $white;
 	margin-top: auto;
+
+	&--no-log{
+		background-color: darken($white, 2);
+		border-top: 1px solid $light-2;
+		//.footer__conteiner{
+		//	justify-content: center;
+		//}
+
+	}
+
+	&__contact{
+		font-size: $small;
+
+		span{
+			margin-right: rem(5);
+		}
+		a{
+			color: $teal;
+			&:hover{
+				color: darken($teal, 10);
+			}
+		}
+	}
+	//end no-log
+
 	&__container{
 		display: flex;
 		align-items: center;
@@ -38,6 +63,8 @@
 
 		}
 	}
+
+
 	&__{}
 	&__{}
 	&__{}

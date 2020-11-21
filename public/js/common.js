@@ -414,6 +414,12 @@ function eventHandler() {
 		postfix: " ❤",
 		prefix: "+"
 	}); //end am
+	//num inps
+
+	$('.code-inputs--js input').keypress(function () {
+		var allInps = document.querySelectorAll('.code-inputs--js input');
+		$(allInps[$.inArray(this, allInps) + 1]).focus();
+	});
 }
 
 ;

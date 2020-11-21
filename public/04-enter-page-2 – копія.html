@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>04-enter-page-2</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -23,236 +23,37 @@
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body>
-		<div class="main-wrapper">
-			<div class="menu-mobile menu-mobile--js d-md-none">
-				<!--+b.toggle-menu-mobile--jsspan
-				-->
-				<div class="menu-mobile__inner">
-					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link navMenu__link--bag" href="#" itemprop="url">
-							<div class="icon-cont">
-								<svg class="icon icon-bag ">
-									<use xlink:href="img/svg/sprite.svg#bag"></use>
-								</svg>
-							</div><span>Биржа</span></a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link navMenu__link--heart" href="#" itemprop="url">
-							<div class="icon-cont">
-								<svg class="icon icon-heart ">
-									<use xlink:href="img/svg/sprite.svg#heart"></use>
-								</svg>
-							</div><span>Самопиар</span></a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link navMenu__link--vip link-modal" href="#vip-modal" itemprop="url">
-							<div class="icon-cont">
-								<svg class="icon icon-crown ">
-									<use xlink:href="img/svg/sprite.svg#crown"></use>
-								</svg>
-							</div><span>Активировать VIP</span></a>
-						</li>
-					</ul>
-					<div class="text-right"></div>
+	<body class="enter-page">
+		<!-- start sEnter-->
+		<div class="sEnter section" id="sEnter">
+			<div class="sEnter__container container">
+				<div class="sEnter__dog"><img src="img/svg/enter-dog.svg" alt="">
+				</div>
+				<div class="sEnter__title">
+					<p>Введите номер телефона в международном формате, через который вы регистрировались</p>
+				</div>
+				<div class="sEnter__num-input">
+					<div class="sEnter__input-wrap form-group"><input class="sEnter__input form-control" type="tel" placeholder="Номер телефона" name="tel"/>
+						<svg class="icon icon-phone ">
+							<use xlink:href="img/svg/sprite.svg#phone"></use>
+						</svg>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="sEnter__num-btn" type="submit">
+						<svg class="icon icon-arrow-right ">
+							<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+						</svg>
+					</button>
 				</div>
 			</div>
-			<!--  мобильное меню-->
-			<!-- start header-->
-			<header class="header" id="header">
-				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
-					<div class="top-nav__container container"><a class="top-nav__user-img" href="#"><img loading="lazy" src="img/@2x/profile-img.jpg" alt=""/></a>
-						<div class="toggle-menu-mobile toggle-menu-mobile--js d-md-none"><span></span>
-						</div>
-						<ul class="navMenu d-none d-md-flex" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="navMenu__item" itemprop="item"><a class="navMenu__link active" href="" itemprop="url">Биржа</a>
-							</li>
-							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="" itemprop="url">Самопиар</a>
-							</li>
-							<li class="navMenu__item" itemprop="item"><a class="navMenu__link navMenu__link--vip link-modal" href="#vip-modal" itemprop="url">Активировать VIP</a>
-							</li>
-						</ul><a class="top-nav__complain-btn link-modal" href="#manager-complain"><span>Пожаловаться на менеджера</span>
-						<svg class="icon icon-ambulance ">
-							<use xlink:href="img/svg/sprite.svg#ambulance"></use>
-						</svg></a><a class="top-nav__log-out" href="#">
-						<svg class="icon icon-sign-out ">
-							<use xlink:href="img/svg/sprite.svg#sign-out"></use>
-						</svg></a>
-					</div>
-				</div>
-				<!-- end top-nav-->
-			</header>
-			<!-- end header-->
-			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
-				<div class="container">
-					<div class="headerBlock__row row">
-						<div class="headerBlock__col col-6 col-md-3"><a class="headerBlock__item" href="#"><span class="headerBlock__i-content"><span class="headerBlock__user"><span class="headerBlock__user-img"><img loading="lazy" src="img/@2x/profile-img.jpg" alt=""/></span><span class="headerBlock__user-name">mr.krutmen</span></span></span><span class="headerBlock__i-foot">Сменить аккаунт</span></a>
-						</div>
-						<div class="headerBlock__col col-6 col-md-3"><a class="headerBlock__item" href="#"><span class="headerBlock__i-content"><span class="headerBlock__item-img"><img loading="lazy" src="img/svg/heart_bag.svg" alt=""/></span></span><span class="headerBlock__i-foot">Биржа</span></a>
-						</div>
-						<div class="headerBlock__col col-6 col-md-3"><a class="headerBlock__item" href="#"><span class="headerBlock__i-content"><span class="headerBlock__item-img"><img loading="lazy" src="img/svg/heart.svg" alt=""/></span></span><span class="headerBlock__i-foot">Самопиар</span></a>
-						</div>
-						<div class="headerBlock__col col-6 col-md-3"><a class="headerBlock__vip-item link-modal" href="#vip-modal"><span class="headerBlock__vip-bg"><img loading="lazy" src="img/svg/diamond-bg.svg" alt=""/></span><span class="headerBlock__vip-content"><span class="headerBlock__vip-title">Внимание!</span><span class="headerBlock__vip-txt">
-							Мы можем следить за вашим
-							instagram и автоматически
-							ставить
-							
-							<svg class="icon icon-heart ">
-								<use xlink:href="img/svg/sprite.svg#heart"></use>
-							</svg>
-							и
-							
-							<svg class="icon icon-eye ">
-								<use xlink:href="img/svg/sprite.svg#eye"></use>
-							</svg>
-							на новые публикации</span></span></a>
-						</div>
-						<div class="headerBlock__col col-12 col-lg-6">
-							<div class="headBaner">
-								<div class="headBaner__bg"><img loading="lazy" src="img/svg/bg-action.svg" alt=""/>
-								</div>
-								<div class="headBaner__txt-bl">
-									<div class="headBaner__title">Проверьте работу биржи!
-									</div>
-									<div class="headBaner__txt">
-										Закажите 50
-										
-										<svg class="icon icon-heart ">
-											<use xlink:href="img/svg/sprite.svg#heart"></use>
-										</svg>
-										на последние 27 публикаций
-									</div>
-								</div><a class="headBaner__btn link-modal" href="#modal-check"><span>Всего за 99</span><span class="rub-mark">₽</span></a>
-							</div>
-						</div>
-						<div class="headerBlock__col col-12 col-lg-6">
-							<div class="headBaner">
-								<div class="headBaner__bg"><img loading="lazy" src="img/svg/bg-action.svg" alt=""/>
-								</div>
-								<div class="headBaner__txt-bl">
-									<h2 class="headBaner__title">Бонус за каждый аккаунт.
-									</h2>
-									<div class="headBaner__txt">
-										Получите 100
-										
-										<svg class="icon icon-heart ">
-											<use xlink:href="img/svg/sprite.svg#heart"></use>
-										</svg>
-										на баланс прямо сейчас!
-									</div>
-								</div><a class="headBaner__btn link-modal" href="#add-insta">Получить</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end headerBlock-->
-			<!-- start sHow-->
-			<section class="sHow section" id="sHow">
-				<div class="container">
-					<div class="sHow__inner">
-						<div class="section-title text-center">
-							<h2>Как получить лайки и просмотры?</h2>
-						</div>
-						<div class="sHow__row row">
-							<div class="sHow__col col-6 col-sm-4">
-								<div class="sHow__item">
-									<div class="sHow__img-cont">
-										<div class="sHow__img"><img loading="lazy" src="img/svg/sHow-1.svg" alt=""/>
-										</div>
-									</div>
-									<div class="sHow__txt">Заходите в<br class="d-none d-md-block"/>раздел
-										<a href="#">самопиар</a>
-									</div>
-								</div>
-							</div>
-							<div class="sHow__col col-6 col-sm-4">
-								<div class="sHow__item">
-									<div class="sHow__img-cont">
-										<div class="sHow__img"><img loading="lazy" src="img/svg/sHow-2.svg" alt=""/>
-										</div>
-									</div>
-									<div class="sHow__txt">Выбирайте публикацию и<br class="d-none d-lg-block"/>количество лайков и просмотров
-									</div>
-								</div>
-							</div>
-							<div class="sHow__col col-6 col-sm-4">
-								<div class="sHow__item">
-									<div class="sHow__img-cont">
-										<div class="sHow__img"><img loading="lazy" src="img/svg/sHow-3.svg" alt=""/>
-										</div>
-									</div>
-									<div class="sHow__txt">Она попадет на биржу,<br class="d-none d-lg-block"/>люди ставят лайки и просмотры
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end sHow-->
-			<!-- start sCharts-->
-			<div class="sCharts section" id="sCharts">
-				<div class="container">
-					<div class="sCharts__row row">
-						<div class="sCharts__col col-lg-6">
-							<div class="sCharts__item">
-								<div class="sCharts__title">
-									<h2 class="sCharts__txt">Лайков поставлено на ваши публикации
-									</h2>
-									<div class="tooltip">
-										<div class="tooltip__tt-img">
-											<svg class="icon icon-question-sign ">
-												<use xlink:href="img/svg/sprite.svg#question-sign"></use>
-											</svg>
-										</div>
-										<div class="tooltip__tt-txt">Сколько лайков в день Вам ставям люди в нашем сервисе.
-										</div>
-									</div>
-								</div>
-								<div class="sCharts__chart-cont">
-									<div id="likeUser"></div>
-								</div>
-							</div>
-						</div>
-						<div class="sCharts__col col-lg-6">
-							<div class="sCharts__item">
-								<div class="sCharts__title">
-									<h2 class="sCharts__txt">Лайки на последних публикациях
-									</h2>
-									<div class="tooltip">
-										<div class="tooltip__tt-img">
-											<svg class="icon icon-question-sign ">
-												<use xlink:href="img/svg/sprite.svg#question-sign"></use>
-											</svg>
-										</div>
-										<div class="tooltip__tt-txt">Среднее количество лайков на ваших последних публикациях.
-										</div>
-									</div><a class="sCharts__refresh-btn" href="#">
-									<svg class="icon icon-refresh ">
-										<use xlink:href="img/svg/sprite.svg#refresh"></use>
-									</svg></a>
-								</div>
-								<div class="sCharts__chart-cont">
-									<div id="likeLast"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end sCharts-->
-			<footer class="footer block-with-lazy">
-				<div class="footer__container container">
-					<div class="footer__id-bl">
-						<div class="footer__id-txt">Ваш ID:
-						</div>
-						<div class="footer__id">746421
-						</div>
-					</div><a class="footer__support" href="#">Тех. поддержка</a>
-				</div>
-			</footer>
 		</div>
+		<!-- end sEnter-->
+		<footer class="footer footer--no-log block-with-lazy">
+			<div class="footer__container container d-block">
+				<div class="footer__contact text-center"><span>Contact us via e-mail:</span><a href="mailto:support@lfvip.ru">support@lfvip.ru</a>
+				</div>
+			</div>
+		</footer>
 		<!--complain modal-->
 		<div class="complain-modal default-modal" id="manager-complain" style="display: none">
 			<div class="form-wrap">

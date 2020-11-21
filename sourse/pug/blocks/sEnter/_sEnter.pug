@@ -1,0 +1,15 @@
+mixin sEnter(data)
+	// start sEnter
+	+b.sEnter.section#sEnter&attributes(attributes)
+		+e.container.container
+			if block
+				block
+			else
+				+e.dog
+					img(src="img/svg/enter-dog.svg" alt="")
+				+e.title
+					h4 Привет!
+					p Сегодня отличный день, чтобы немножечко поработать вместе
+				+e.btn-log(href='#') Зарегистрироваться
+				+e.btn-reg(href='#') Войти
+	// end sEnter

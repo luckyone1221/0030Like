@@ -44,7 +44,15 @@ html {
 	flex-direction: column;
 }
 
+.enter-page{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 body {
+
 	background-image: url(../img/@2x/body-bg.jpg);
 	background-repeat: repeat;
 	background-color: transparent;
