@@ -424,8 +424,7 @@ function eventHandler() {
 		createCommonChart2("likeLast", dataArrExample, '#d65988');
 	}
 
-
-
+	
 	//range slider
 	$(".range-slider--js").ionRangeSlider({
 		from: 40,
