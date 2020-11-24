@@ -184,7 +184,60 @@ mixin modal()
 				img(loading="lazy" src="img/@2x/lock-img.png" alt="")
 			+e.txt Увы и Ах! Ставить лайки на бирже, могут лишь аккаунты, которые оставили заявку и прошли обучение.
 			+e.btn.modal-close-js ОК
+	+b.switch-modal.default-modal(id="switch-modal" style="display: none")
+		+form-wrap
+			+e.title
+				h2 Выберите аккаунт
+			+e.accs-list
+				+accListItem('_asdasdasd')
+				+accListItem('an.leonovaa')
+				+accListItem('mr.krutmen')
+			+e.btn-cont
+				+e.btn
+					+icon('plus')
+					span Добавить себя
+	+b.country-modal.default-modal(id="country-modal" style="display: none")
+		+form-wrap
+			+e.title
+				h2 Выберите вашу страну
+				p Если в вашей стране, мало людей участвующих в системе, вы получите лайки из соседних стран вашего региона.
+			+e.country-list
+				+countryListItem('ru', 'Россия')
+				+countryListItem('ua', 'Україна')
+				+countryListItem('by', 'Беларусь')
+				+countryListItem('kz', 'Қазақстан')
+				+countryListItem('am', 'Армения')
+				+countryListItem('another', 'Другая страна')
+	+b.delete-acc-modal.default-modal(id="delete-acc-modal" style="display: none")
+		+form-wrap
+			+e.title
+				+e.icon
+					+icon('instagram')
+				h2 Удалить аккаунт
+				p Вы можете полностью удалить аккаунт из системы.
+			+e.gray-bl Чтобы удалить аккаунт из системы нажмите «Удалить». После этого система остановит все активные задачи, и удалит ваш аккаунт.
+			+e.btns
+				+e.cancel-btn(href='#') Отмена
+				+e.remove-btn(href='#') Удалить аккаунт
+
 		// end modals
+
+mixin countryListItem(imgNum, name)
+	+e.country-li(href="#")
+		+e.img
+			img(loading="lazy" src=`img/@2x/flag-${imgNum}.png` alt='')
+		+e.name=name
+
+mixin accListItem(name)
+	+e.accs-li
+		+e.img
+			img(loading="lazy" src="img/@2x/profile-img.jpg" alt="")
+		+e.name=name
+		+e.actions
+			+e.action-item(href='#')
+				+icon('trash')
+			+e.action-item(href='#')
+				+icon('wheel')
 
 mixin postRadio(val, name='amount-radio')
 	+e.LABEL.am-item
